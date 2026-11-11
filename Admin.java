@@ -1,13 +1,17 @@
 import java.util.Scanner;
 
 class Admin extends User{
+	String userName;
+	String PIN;
+
 	public static void main(String[] args){
-		start();
-	
+		Admin a = new Admin("admin" , "0000");
+		a.login();
+
 	public void start(){}
 
-	public Admin(){
-	}
+	public Admin(){}
+
 	public Admin(String userName, String PIN){
 		setUserName(userName);
 		setPIN(PIN);
@@ -22,9 +26,10 @@ class Admin extends User{
 		String response = input.nextLine();
 		return response;
 	}
-	public void getReport(){
-		for (
+	public String getReport(){
+		String report = "Admin Username: " + this.getUserName();
+		report += "Admin PIN: " + this.getPIN();
+
+		return report;
 	}
-
-
 }//end Admin def
