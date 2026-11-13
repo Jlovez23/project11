@@ -5,17 +5,16 @@ class Admin extends User{
 	String PIN;
 
 	public static void main(String[] args){
-		Admin a = new Admin("admin" , "0000");
+		Admin a = new Admin();
 		a.login();
-
+	}
 	public void start(){}
 
-	public Admin(){}
-
-	public Admin(String userName, String PIN){
-		setUserName(userName);
-		setPIN(PIN);
+	public Admin(){
+		this.userName = "admin";
+		this.PIN = "0000";
 	}
+	
 	public String menu(){
 		System.out.println("\nAdmin Menu \n");
 		System.out.println("0) to quit");

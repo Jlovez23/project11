@@ -1,6 +1,7 @@
 import java.util.Scanner;
+import java.io.*;
 
-class SavingsAccount extends CheckingAccount{
+class SavingsAccount extends CheckingAccount, serializable{
     	double interestRate;
 
     	public static void main(String[] args){

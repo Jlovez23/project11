@@ -19,6 +19,9 @@ Admin.class: Admin.java
 Bank.class: Bank.java
 	javac -g Bank.java
 
+run: Bank.class
+	java Bank
+
 testAdmin: Admin.class
 	java Admin
 

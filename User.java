@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.io.Serializable;
+import java.io.*;
 
 abstract class User implements HasMenu, Serializable {
         String userName;
