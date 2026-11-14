@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 
-class Customer extends User, serializable {
+class Customer extends User implements Serializable {
 	private CheckingAccount checking; 
 	private SavingsAccount savings;
 	

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class CheckingAccount implements HasMenu, serializable{
+public class CheckingAccount implements HasMenu, Serializable {
 	double balance;
 
 	public static void main(String[] args){

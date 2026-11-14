@@ -1,12 +1,13 @@
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 public class Bank implements HasMenu{
 	Admin Admin;
-	Customer CustomerList;
+	CustomerList customers;
 
 	public static void main(String[] args){
 		Bank B = new Bank();
+		B.start();
 	}
 
 	public void start(){
@@ -17,16 +18,16 @@ public class Bank implements HasMenu{
 			if (response.equals("0"))
 				keepGoing = false;
 			else if (response.equals("1"))
-				System.out.println("log in to Customer here");
-				//loginAsCustomer();
-			else if (response.equals("2")){
 				System.out.println("log in to Admin here");
-				/*
+			/*
 				if (Admin.login())
 					AdminStart();
-				else
+				else 
 					System.out.println("Login failed");
-				*/
+			*/
+			else if (response.equals("2")){
+				System.out.println("Login as Customer");
+				//loginAsCustomer();
 			}
 		}//end while
 	}
@@ -70,7 +71,7 @@ public class Bank implements HasMenu{
 
 	}
 */
-	public String Menu(){
+	public String menu(){
 		String response;
 		System.out.println("\nBank menu\n");
 		System.out.println("0) exit system");
