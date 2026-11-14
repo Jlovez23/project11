@@ -35,6 +35,7 @@ public class CheckingAccount implements HasMenu, Serializable {
 		System.out.println("press 1 to check balance");
 		System.out.println("press 2 to make a deposit");
 		System.out.println("press 3 to make a withdrawal");
+		System.out.print("Action: ");
 		Scanner input = new Scanner(System.in);
 		String response = input.nextLine();
 		return response;

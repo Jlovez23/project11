@@ -1,9 +1,7 @@
 import java.util.Scanner;
 
 class Admin extends User{
-	String userName;
-	String PIN;
-
+	
 	public static void main(String[] args){
 		Admin a = new Admin();
 		a.login();
@@ -11,8 +9,8 @@ class Admin extends User{
 	public void start(){}
 
 	public Admin(){
-		this.userName = "admin";
-		this.PIN = "0000";
+		setUserName("admin");
+		setPIN("0000");
 	}
 	
 	public String menu(){
@@ -21,6 +19,7 @@ class Admin extends User{
 		System.out.println("1) Full customer report");
 		System.out.println("2) Add User");
 		System.out.println("3) Apply interest to savings account");
+		System.out.print("Action: ");
 		Scanner input = new Scanner(System.in);
 		String response = input.nextLine();
 		return response;

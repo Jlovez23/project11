@@ -2,8 +2,8 @@ import java.util.Scanner;
 import java.io.*;
 
 class Customer extends User implements Serializable {
-	private CheckingAccount checking; 
-	private SavingsAccount savings;
+	CheckingAccount checking; 
+	SavingsAccount savings;
 	
     	public static void main(String[] args){
 		Customer customer = new Customer("Alice", "1111");
@@ -56,6 +56,7 @@ class Customer extends User implements Serializable {
 		System.out.println("1) to manage Checking Account");
 		System.out.println("2) to manage Savings Account");
 		System.out.println("3) Change PIN");
+		System.out.print("Action: ");
 		Scanner input = new Scanner(System.in);
 		String response = input.nextLine();
 		return response;
@@ -63,7 +64,7 @@ class Customer extends User implements Serializable {
 	void changePIN(){
 		Scanner input = new Scanner(System.in);
 
-		System.out.println("Enter new PIN: ");
+		System.out.print("Enter new PIN: ");
 		String newPIN = input.nextLine();
 
 		setPIN(newPIN);
